@@ -1,4 +1,8 @@
-/* Template untuk C++ SFML */
+/* 
+ * Template untuk C++ SFML 
+ * 
+ * compile dengan -lsfml-graphics -lsfml-window -lsfml-system
+ */
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
