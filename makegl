@@ -1,0 +1,17 @@
+OBJS = main.o glad.o
+
+%.o: src/%.c
+	gcc -c $^ -o $@ -Iinclude
+
+%.o: src/%.cpp
+	g++ -c $^ -g -o $@ -Iinclude
+
+all: $(OBJS)
+	g++ $^ -o game -lglfw3 -g -lGL -lX11 -lpthread -lXrandr -lXi -ldl
+
+run: game
+	./game
+
+clean: 
+	rm $(OBJS)
+	rm game
